@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBTnPJIrDvumrknj1XrDyS_0DIfJE5U2ec",
+    authDomain: "heromaker-11e8c.firebaseapp.com",
+    projectId: "heromaker-11e8c",
+    storageBucket: "heromaker-11e8c.appspot.com",
+    messagingSenderId: "338144059116",
+    appId: "1:338144059116:web:1c3cfdf7ec2f310232cfc9",
+    measurementId: "G-7WV1HHWC6Z"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="d-grid col-2 mx-auto container" >
+        <h1>WELCOME</h1>
+    </div>
+    <div class="container" id="login-form">
+        <div class="well">
+    <form>
+        <div class="form-group my-2">
+          <label for="inputEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="form-group my-2">
+          <label for="inputPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password" >
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto my-2">
+            <button id="sign-in-button" type="button" class="btn btn-primary" type="button">Sign in</button>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto my-2">
+            <button id="create-newuser-button" type="button" class="btn btn-warning" type="button">Creare new account</button>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto my-2">
+            <button id="google-login-button" type="button" class="btn btn-primary" type="button">Sign in with Google</button>
+        </div>
+      </form>
+      <div class="d-grid col-5 mx-auto container" >
+        <h1>CREATE YOUR HERO</h1>
+    </div>
+      <form>
+        <div class="form-group my-2">
+          <label for="inputHeroName" >Hero Name</label>
+          <input type="text" class="form-control" id="inputHeroName"  placeholder="Hero Name">
+        </div>
+        <div class="form-group my-2">
+            <label for="hero-race" >Hero race</label>
+            <select  class="form-select" aria-label="Default select example" id="herorace">
+                <option value="Wizard">Wizard</option>
+                <option value="Ork">Ork</option>
+                <option value="Elf">Elf</option>
+                <option value="Elf">Elf</option>
+                <option value="HALFLING">HALFLING</option>
+                <option value="CYCLOPES">CYCLOPES</option>
+                <option value="Human">Human</option>
+            </select>
+        </div>
+        <div class="form-group my-2">
+            <label for="hero-Proffesion" >Hero Profession</label>
+            <select  class="form-select" aria-label="Default select example" id="hero-Proffesion">
+                <option value="Armorer">Armorer</option>
+                <option value="Cobbler">Cobbler</option>
+                <option value="Cooper">Cooper</option>
+                <option value="Falconer">Falconer</option>
+                <option value="Ferreter">Ferreter</option>
+                <option value="Forger">Forger</option>
+                <option value="Harberdasher">Harberdasher</option>
+                <option value="PLOWMAN">PLOWMAN</option>
+            </select>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto my-2">
+            <button id="create-newhero-button" type="button" class="btn btn-primary" type="button">Create new hero</button>
+        </div>
+      </form>
+    </div>
+    </div>
+   
+</body>
+</html>
